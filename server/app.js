@@ -27,7 +27,7 @@ app.use("/api/teacher", teacherrouter);
 app.use("/api/subject", subjectrouter);
 app.use("/api/marks", marksrouter);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, async () => {
   await connectDB();
