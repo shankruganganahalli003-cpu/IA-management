@@ -20,10 +20,14 @@ const Register = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post("http://localhost:3000/api/auth/register", form, {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true,
-      });
+      const { data } = axios.post(
+  "https://ia-management-production.up.railway.app/api/auth/register",
+  form,
+  {
+    headers: { "Content-Type": "application/json" },
+    withCredentials: true,
+  }
+);
 
       if (data.success) {
         toast.success(data.message);
