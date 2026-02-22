@@ -26,7 +26,7 @@ app.use("/api/subject",subjectrouter);
 app.use("/api/marks",marksrouter);
 
 
-const port = process.env.MONGO_URI;
+const port = process.env.MONGO_URI
 app.listen(port,()=>{
     connectDB();
     console.log(`server is running ${port}`)
