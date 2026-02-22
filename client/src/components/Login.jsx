@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post("http://localhost:8080/api/auth/login", form, {
+      const { data } = await axios.post("https://ia-management-production.up.railway.app/api/auth/login", form, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
