@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express()
 const connectDB = require("./config/database");
-const cookieparser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
 require("dotenv").config();
 const authrouter = require("./routes/authroute");
@@ -13,7 +13,7 @@ const marksrouter = require("./routes/marksroute");
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cookieparser());
+app.use(cookieParser());
 app.use(cors({origin:"http://localhost:5173",
     credentials:true
 }));
